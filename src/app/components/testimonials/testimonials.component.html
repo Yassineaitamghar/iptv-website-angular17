@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- testimonial.component.html -->
+<!-- Testimonials -->
+<aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
+  <div class="row clearfix">
+    <div class="section-heading">
+      <h3>{{ testimonials?.data?.title }}</h3>
+      <h2 class="section-title">{{ testimonials?.data?.description }}</h2>
+    </div>
+
+    <!-- User Testimonials using *ngFor -->
+    <blockquote
+      *ngFor="let feedback of testimonials?.data?.feedback; let i = index"
+      class="col-3 testimonial classic"
+    >
+      <img [src]="feedback.image" alt="User" />
+      <q>{{ feedback.quote }}</q>
+      <footer>{{ feedback.author }}</footer>
+    </blockquote>
+
+    <!-- End of Testimonials -->
+  </div>
+</aside>
+<!-- End of Testimonials -->

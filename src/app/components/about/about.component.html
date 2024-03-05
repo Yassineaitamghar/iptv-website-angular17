@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--Introduction-->
+<section id="about" class="introduction scrollto">
+  <div class="row clearfix">
+    <div class="col-3">
+      <div class="section-heading">
+        <h3>{{ about?.data?.title }}</h3>
+        <h2 class="section-title">
+          {{ about?.data?.description }}
+        </h2>
+        <p class="section-subtitle">
+          {{ about?.data?.detail }}
+        </p>
+      </div>
+    </div>
+
+    <div class="col-2-3">
+      @for (iconBlock of about?.data?.IconBlocks; track iconBlock) {
+
+      <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
+        <!--Icon-->
+        <div class="icon">
+          <i class="fa {{ iconBlock.icon }} fa-2x"></i>
+        </div>
+        <!--Icon Block Description-->
+        <div class="icon-block-description">
+          <h4>{{ iconBlock.title }}</h4>
+          <p>
+            {{ iconBlock.descreption }}
+          </p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+<!--End of Introduction-->

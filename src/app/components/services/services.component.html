@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Content Section -->
+<div id="services" class="scrollto clearfix">
+  <div class="row no-padding-bottom clearfix">
+    <!-- Content Left Side -->
+    <div class="col-3">
+      <!-- User Testimonial -->
+      <blockquote class="testimonial text-right bigtest">
+        <q>{{ services?.data?.testimonial?.quote }}</q>
+        <footer>{{ services?.data?.testimonial?.author }}</footer>
+      </blockquote>
+      <!-- End of Testimonial -->
+    </div>
+    <!-- End Content Left Side -->
+
+    <!-- Content of the Right Side -->
+    <div class="col-3">
+      <div class="section-heading">
+        <h3>BELIEVING</h3>
+        <h2 class="section-title">
+          {{ services?.data?.sectionHeading?.title }}
+        </h2>
+        <p class="section-subtitle">
+          {{ services?.data?.sectionHeading?.subtitle }}
+        </p>
+      </div>
+      <p>{{ services?.data?.content?.paragraph1 }}</p>
+      <p>{{ services?.data?.content?.paragraph2 }}</p>
+      <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
+      <a
+        href="#"
+        [attr.data-videoid]="services?.data?.videoConfig?.videoid"
+        [attr.data-videosite]="services?.data?.videoConfig?.videosite"
+        class="button video link-lightbox"
+      >
+        WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
+      </a>
+    </div>
+    <!-- End Content Right Side -->
+
+    <div class="col-3">
+      <img [src]="services?.data?.dancerImage" alt="Dancer" />
+    </div>
+  </div>
+</div>
+<!-- End of Content Section -->

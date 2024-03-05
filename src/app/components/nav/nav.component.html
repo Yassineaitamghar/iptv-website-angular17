@@ -1,0 +1,54 @@
+<div id="header" class="nav-collapse">
+  <div class="row clearfix">
+    <div class="col-1">
+      <!-- Logo -->
+      <div id="logo">
+        <!-- Banner Logo -->
+        <img
+          [src]="nav?.data?.logoBannerSrc"
+          id="banner-logo"
+          alt="Landing Page"
+        />
+
+        <!-- Navigation Logo -->
+        <img
+          [src]="nav?.data?.logoNavigationSrc"
+          id="navigation-logo"
+          alt="Landing Page"
+        />
+      </div>
+
+      <aside>
+        <!-- Social Icons in Header -->
+        <ul class="social-icons">
+          <li *ngFor="let icon of nav?.data?.socialIcons">
+            <a
+              target="{{ icon.target }}"
+              [title]="icon.title"
+              [href]="icon.link"
+            >
+              <i [class]="icon.iconClass"></i><span>{{ icon.title }}</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Navigation -->
+      <nav id="nav-main">
+        <ul>
+          <li *ngFor="let link of nav?.data?.navigationLinks">
+            <a
+              [routerLink]="link.path"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
+              >{{ link.label }}</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div id="nav-trigger"><span></span></div>
+      <nav id="nav-mobile"></nav>
+    </div>
+  </div>
+</div>
